@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Jacquard 12","Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu", "sans-serif";
+}
+
+body{
+  background-color: black;
+}
+nav{
+  z-index: 2;
+  max-width: 80vw; 
+  margin: auto;
+  height: auto;
+  padding-top: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav>div :nth-child(1){
+  height: auto;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: white;
+  background: transparent;
+  position: relative;
+}
+
+.red_btn_nav{
+  color: white;
+  background-color: red;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.SVG{
+  width: 9.25rem;
+  height: 2.5rem;
+  fill: currentColor;     /* IMP */
+  color: red;
+  position: relative;
+}
+.main {
+  background: url("assets/Images/Img1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: max(1500px, 100vw); */
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+.main .box{
+  height: 90vh;
+  width: 100%;
+  opacity: 0.55;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+/* .main::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  opacity: 0.8;
+  z-index: 1;
+} */
+
+.red_btn_main{
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;  
+  padding: 0.75rem 1.5rem;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  fill: currentColor;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.main_text{
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  height:calc(90vh - 2.5rem - 15px);
+  position: relative;
+  padding: 30px;
+}
+
+input{
+  background-color: hsla(0, 2%, 23%, 0.5);
+  height: 44px;
+  width: 350px;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.main_text> :nth-child(4), .second> :nth-child(9){
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-top: 10px;
+}
+
+.mt{
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 8px 0px;
+  text-align: center;
+}
+
+.mt1{
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.seperate{
+  height: 7px;
+  background-color: rgb(48, 48, 48);
+}
+
+.first{
+  padding: 4.5rem 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 70%;
+}
+
+.first> :nth-child(1){
+  display: flex;
+  flex-direction: column;
+}
+
+.first> :nth-child(2){
+  display: grid;
+  position: relative;
+}
+.first>div>div{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-content: center;
+  justify-self: center;
+  z-index: 1;
+}
+.first>div>img{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 2;
+}
+
+.v2{
+  position: absolute;  
+  top: 25px;
+}
+
+.second{
+  padding: 4.5rem 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qns{
+  height: auto;
+  width: 70vw;
+  padding: 24px 20px;
+  background-color:rgb(50, 50, 50);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second>div>svg{
+  fill: currentColor;
+  color: white;
+}
+
+.ft{
+  color: rgb(177, 176, 176);
+}
+
+footer{
+  padding: 4.5rem 0;
+  height: auto;
+  margin: 0px 10vw;
+  line-height: 30px;
+}
+
+footer> :nth-child(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 1000px) {
+  .first{
+    display: flex;
+    flex-direction: column;
+  }
+  .main_text{
+    height:calc(90vh - 2.5rem - 75px);
+  }
+  .main_text> :nth-child(4), .second> :nth-child(9){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .second{
+    max-width: min-content;
+    margin: auto;
+  }
+  footer> :nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .red_btn_main{
+    margin-top: 15px;
+  }
+  .mt{
+    font-size: 20px;
+  }
+  .mt1{
+    font-size: 31px;
+  }
+  input{
+    width: 320px;
+  }
+  .first img{
+    max-width: 378px;
+  }
+}
