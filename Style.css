@@ -215,6 +215,9 @@ footer> :nth-child(2){
 }
 
 @media only screen and (max-width: 1000px) {
+  .main>nav>svg{
+    width: 122px;
+  }
   .first{
     display: flex;
     flex-direction: column;
